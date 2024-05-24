@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const heading = React.createElement("h1",{
     id:"heading"
 },"Hello World from react");
@@ -44,3 +47,4 @@ const p1 = React.createElement("div",{
 
 const ele1 = ReactDOM.createRoot(document.getElementById("root2"));
 ele1.render(p1); 
+
