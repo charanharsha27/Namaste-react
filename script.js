@@ -1,50 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+/*
 const heading = React.createElement("h1",{
     id:"heading"
 },"Hello World from react");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
+*/
 
+/* Creating react elements with the help of JSX(Javascript syntax for writing react code easier)
 
-
-/* creating a nested element.
-
-    <div id="parent">
-        <div id="child">
-            <h1></h1>
-        </div>
-    </div>
+const jsxHeading = (<h1 className="heading">Namaste React</h1>);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxHeading);
 
 */
 
-const parent = React.createElement("div",{
-    id:"parent"
-},React.createElement("div",{
-    id:"child"
-},React.createElement("h1",{
-    id:"heading"
-},
-"Hello World from react2")));
 
-console.log(parent); // React Object
-
-const ele = ReactDOM.createRoot(document.getElementById("root1")); // creates a root element to manipulate the dom of element with id = root1.
-ele.render(parent); // converts React Object to Html element and renders it to the root1 div.
+//react components
+//1. Functional components
+const Title = () => {
+    return <h1>I am title</h1>
+}
+const HeadingComponent = () => {
+    return <h1>Hello</h1>
+};
 
 
-// props -> attributes and children of an element.
+//component composition
+const HeadingComponent1 = () => (
+    <div id="container">
+        <Title/>  
+        <h1 className="heading2">Hello there</h1>
+    </div>
+);
 
-
-// to create siblings we need to pass an array of elements to the childen prop of the parent element.
-
-const p1 = React.createElement("div",{
-    id:"parent"
-},React.createElement("div",{
-    id:"child"
-},[React.createElement("h1",{id:"heading"},"Hello World from react2"),React.createElement("h1",{id:"heading2"},"Hello World from react2")]));
-
-const ele1 = ReactDOM.createRoot(document.getElementById("root2"));
-ele1.render(p1); 
-
+const root1 = ReactDOM.createRoot(document.getElementById("root"));
+root1.render(<HeadingComponent1 />);
