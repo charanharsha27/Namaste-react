@@ -1,0 +1,12 @@
+Requirements - Food delivery app
+-Header
+    -> Logo
+    -> Home,about,services..
+    ->Cart
+-Body
+    -> Search option
+    -> Restaurent component
+    -> Cards
+-Footer
+    -> Copyright
+    -> Links
